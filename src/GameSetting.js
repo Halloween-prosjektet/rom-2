@@ -15,7 +15,17 @@ export default class GameSetting extends Phaser.Scene {
 
 		//! for lås sprites
 		const lockSprite = this.add.sprite(985, 540, "Lock");
+
+		//insta play
 		lockSprite.play("Locks_anime");
+
+		this.add.dom(
+			x,
+			y,
+			"div",
+			"background-color: lime; width: 220px; height: 100px; font: 48px Arial",
+			"Phaser"
+		);
 	}
 
 	update() {}

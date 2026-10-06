@@ -10,6 +10,6 @@ export const loadAnimations = (scene) => {
 		}),
 		frameRate: 12,
 		repeat: -1,
-		repeatDelay: 2000
+		repeatDelay: 1000
 	});
 };

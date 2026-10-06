@@ -61,3 +61,10 @@ labyrinth search
 unexplored map
 
 snegler, edderkopper, og andre krypdyr går rundt.
+
+
+
+skal lage: 
+
+pressure plates som du må sto på og de er active for 10 sek og de åpner noe knapper som gjør det samma, 
+og de er kobla til lys, og lyd i virkeligheter. 

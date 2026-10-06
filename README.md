@@ -39,8 +39,25 @@ eller
 som doors lvl 50 hvor du går rundt mappet å finne bostaver/symboler for passordet. 
 
 
+
+
+
+
+
+
 når du går gjennom trappa så starter lyset å flickere/bli mørkere. 
 
 to run :
 npm install 
 npm run dev
+
+
+
+
+Escape  room
+
+labyrinth search
+
+unexplored map
+
+snegler, edderkopper, og andre krypdyr går rundt.

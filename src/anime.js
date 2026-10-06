@@ -3,7 +3,7 @@ export const loadAnimations = (scene) => {
 	scene.anims.create({
 		key: "Locks_anime",
 		frames: scene.anims.generateFrameNames("Lock", {
-			prefix: "Lock0",
+			prefix: "Lock",
 			start: 0,
 			end: 12,
 			zeroPad: 0

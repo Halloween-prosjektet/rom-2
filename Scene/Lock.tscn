@@ -96,10 +96,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1upv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lc1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1upv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lc1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1upv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82rv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82rv1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Lock_fail",
-"speed": 3.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,7 +165,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jdvf1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Lock_unlock",
 "speed": 17.0
 }]
@@ -159,4 +177,14 @@ script = ExtResource("1_82rv1")
 position = Vector2(580, 303)
 sprite_frames = SubResource("SpriteFrames_xyhva")
 animation = &"Lock_fail"
-frame_progress = 0.71775883
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1267584309]
+offset_left = 455.0
+offset_top = 431.0
+offset_right = 756.0
+offset_bottom = 490.0
+placeholder_text = "skriv pass"
+
+[node name="Label" type="Label" parent="." unique_id=1363756465]
+offset_right = 40.0
+offset_bottom = 23.0

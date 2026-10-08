@@ -18,8 +18,9 @@ func user_input (new_text: String) -> void:
 	else:
 		print("incorrect passbroder")
 		animated_sprite_2d.play("Lock_fail")
+
 		
-		await(50000)
+
 		
 		line_edit.clear()
 		

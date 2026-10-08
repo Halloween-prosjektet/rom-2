@@ -295,7 +295,7 @@ script = ExtResource("1_y8w33")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110756496]
 texture_filter = 1
 position = Vector2(218.81187, 140.59406)
-scale = Vector2(4, 4)
+scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_5qp7w")
 animation = &"Idle_down"
 frame_progress = 0.5837156

@@ -7,26 +7,26 @@ pov: On top, som pokemon spill
 Idee 
 
    [ StartScene ]
-      │
-      ├── Passcode Correct? ── No ──► [ Show Error / Retry ]
-      │
-     Yes
-      ▼
+	  │
+	  ├── Passcode Correct? ── No ──► [ Show Error / Retry ]
+	  │
+	 Yes
+	  ▼
 [ MainGameScene ] ──► Player interacts with hallway & solves riddle
-      │
-      ▼
+	  │
+	  ▼
 [ Touches Stairs ]
-      │
-      ├── Riddle Solved? ── No ──► [ Display: "The door down is locked!" ]
-      │
-     Yes
-      ▼
+	  │
+	  ├── Riddle Solved? ── No ──► [ Display: "The door down is locked!" ]
+	  │
+	 Yes
+	  ▼
 [ Disable Player Controls ]
-      │
-      ▼
+	  │
+	  ▼
 [ Play Fade/Movement Tweens ]
-      │
-      ▼
+	  │
+	  ▼
 [ Transition to Next Level ]
 
 story: 

@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://d3awy1ccjxcpx"]
+
+[ext_resource type="Script" uid="uid://cfpkle7qk22n2" path="res://Scene/lock.gd" id="1_82rv1"]
+[ext_resource type="Texture2D" uid="uid://d12yi44bfevl2" path="res://Assests/images/lock/Lock.png" id="1_xyr70"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82rv1"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry5mw"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lc1g"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1upv0"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k65ve"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfedp"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxeus"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yh66"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3b5t"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g223f"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axgcc"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df24o"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv437"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(2048, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj3f0"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(2304, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m82il"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(2560, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52wbr"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(2816, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iidhm"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(3072, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anyho"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(3328, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdvf1"]
+atlas = ExtResource("1_xyr70")
+region = Rect2(3584, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyhva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82rv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82rv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry5mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lc1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1upv0")
+}],
+"loop": 1,
+"name": &"Lock_fail",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k65ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfedp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxeus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yh66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3b5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g223f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axgcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df24o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv437")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj3f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m82il")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52wbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iidhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anyho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdvf1")
+}],
+"loop": 1,
+"name": &"Lock_unlock",
+"speed": 17.0
+}]
+
+[node name="lock" type="Node2D" unique_id=1872613960]
+script = ExtResource("1_82rv1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=318060056]
+position = Vector2(580, 303)
+sprite_frames = SubResource("SpriteFrames_xyhva")
+animation = &"Lock_fail"
+frame_progress = 0.71775883

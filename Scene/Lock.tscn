@@ -174,15 +174,15 @@ animations = [{
 script = ExtResource("1_82rv1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=318060056]
-position = Vector2(580, 303)
+position = Vector2(965, 497)
 sprite_frames = SubResource("SpriteFrames_xyhva")
 animation = &"Lock_fail"
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1267584309]
-offset_left = 455.0
-offset_top = 431.0
-offset_right = 756.0
-offset_bottom = 490.0
+offset_left = 840.0
+offset_top = 625.0
+offset_right = 1141.0
+offset_bottom = 684.0
 placeholder_text = "skriv pass"
 
 [node name="Label" type="Label" parent="." unique_id=1363756465]

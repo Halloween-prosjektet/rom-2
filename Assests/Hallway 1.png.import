@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bydu6l15cu82u"
-path="res://.godot/imported/Hallway 1.png-a3f8af7b62b20416b26d98f1f0237cbf.ctex"
+uid="uid://drxv40lt66via"
+path="res://.godot/imported/Hallway 1.png-d620445adb1a7a767d984a1d3ea637dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/images/Map/Hallway 1.png"
-dest_files=["res://.godot/imported/Hallway 1.png-a3f8af7b62b20416b26d98f1f0237cbf.ctex"]
+source_file="res://Assests/Hallway 1.png"
+dest_files=["res://.godot/imported/Hallway 1.png-d620445adb1a7a767d984a1d3ea637dc.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3awy1ccjxcpx"]
 
-[ext_resource type="Script" uid="uid://cfpkle7qk22n2" path="res://Scene/lock.gd" id="1_82rv1"]
+[ext_resource type="Script" uid="uid://cfpkle7qk22n2" path="res://Scripts/lock.gd" id="1_82rv1"]
 [ext_resource type="Texture2D" uid="uid://d12yi44bfevl2" path="res://Assests/images/lock/Lock.png" id="1_xyr70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_82rv1"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
+[ext_resource type="PackedScene" uid="uid://4druyxol56qu" path="res://Scene/Pad.tscn" id="3_r34rm"]
 
 [node name="main" type="Node2D" unique_id=1453737810]
 
@@ -11,22 +12,5 @@ position = Vector2(1353.9999, -74.99999)
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
 position = Vector2(9, 3)
 
-[node name="PressurePlate" type="Area2D" parent="." unique_id=1091973399]
-
-[node name="Sprite2D" type="Sprite2D" parent="PressurePlate" unique_id=1511731826]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PressurePlate" unique_id=18497746]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=955832143]
-
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1449771367]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=577447298]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="Button" type="Button" parent="." unique_id=1457177541]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Pad" parent="." unique_id=971105380 instance=ExtResource("3_r34rm")]
+position = Vector2(696, 150)

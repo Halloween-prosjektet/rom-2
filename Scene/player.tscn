@@ -147,13 +147,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8w33"]
+size = Vector2(41.089104, 5.9406033)
+
 [node name="Player" type="CharacterBody2D" unique_id=617059282]
 scale = Vector2(2.02, 2.02)
 script = ExtResource("1_y8w33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110756496]
 texture_filter = 1
+<<<<<<< Updated upstream
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_5qp7w")
 animation = &"Idle_down"
 frame_progress = 0.41542396
+=======
+position = Vector2(72.27723, 71.287125)
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_5qp7w")
+animation = &"Idle_down"
+frame_progress = 0.5837156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=363246983]
+position = Vector2(69.80198, 100.49504)
+shape = SubResource("RectangleShape2D_y8w33")
+>>>>>>> Stashed changes

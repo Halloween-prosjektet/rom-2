@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cfis04akjnmsq"]
+
+[ext_resource type="Script" uid="uid://pfndr6ucm13l" path="res://Scene/pressure_plate.gd" id="1_s5qh6"]
+[ext_resource type="Texture2D" uid="uid://kj30ovxfrncx" path="res://Assests/BluePlateOFF.png" id="2_1cjpn"]
+[ext_resource type="Texture2D" uid="uid://reyruu8mpr46" path="res://Assests/BluePlateON.png" id="3_sd7bf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwixg"]
+size = Vector2(96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vk8fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1cjpn")
+}],
+"loop": 1,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sd7bf")
+}],
+"loop": 1,
+"name": &"On",
+"speed": 5.0
+}]
+
+[node name="PressurePlate" type="Area2D" unique_id=569729196]
+script = ExtResource("1_s5qh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458239014]
+position = Vector2(126.44443, 70.75)
+shape = SubResource("RectangleShape2D_hwixg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=640552861]
+position = Vector2(126.44443, 69.75)
+scale = Vector2(1.0037036, 1.0037037)
+sprite_frames = SubResource("SpriteFrames_vk8fu")
+animation = &"Off"

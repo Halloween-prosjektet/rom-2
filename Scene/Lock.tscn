@@ -174,8 +174,12 @@ animations = [{
 script = ExtResource("1_82rv1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=318060056]
+
 position = Vector2(950, 460)
 scale = Vector2(2.2070313, 2.2070313)
+
+position = Vector2(965, 497)
+
 sprite_frames = SubResource("SpriteFrames_xyhva")
 animation = &"Lock_fail"
 

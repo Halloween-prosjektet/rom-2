@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://4druyxol56qu"]
+
+[ext_resource type="Texture2D" uid="uid://3ut3rwqjksns" path="res://Assests/images/Pad/Blue Plate.png" id="1_fde71"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3chbe"]
+atlas = ExtResource("1_fde71")
+region = Rect2(0, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exulr"]
+atlas = ExtResource("1_fde71")
+region = Rect2(240, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkjnv"]
+atlas = ExtResource("1_fde71")
+region = Rect2(480, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rybk"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2640, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm8oa"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2160, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym6mi"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2400, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tly3"]
+atlas = ExtResource("1_fde71")
+region = Rect2(0, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvuem"]
+atlas = ExtResource("1_fde71")
+region = Rect2(240, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_324tj"]
+atlas = ExtResource("1_fde71")
+region = Rect2(480, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik0ob"]
+atlas = ExtResource("1_fde71")
+region = Rect2(720, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d12xq"]
+atlas = ExtResource("1_fde71")
+region = Rect2(960, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iccrm"]
+atlas = ExtResource("1_fde71")
+region = Rect2(1200, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktmxv"]
+atlas = ExtResource("1_fde71")
+region = Rect2(1440, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jida0"]
+atlas = ExtResource("1_fde71")
+region = Rect2(1680, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fatl"]
+atlas = ExtResource("1_fde71")
+region = Rect2(1920, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oet8k"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2160, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q00g"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2400, 0, 240, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxuit"]
+atlas = ExtResource("1_fde71")
+region = Rect2(2640, 0, 240, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8luev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3chbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exulr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkjnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm8oa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym6mi")
+}],
+"loop": 1,
+"name": &"Pad_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tly3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvuem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_324tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik0ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d12xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iccrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktmxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jida0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fatl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oet8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q00g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxuit")
+}],
+"loop": 1,
+"name": &"Pad_stepping",
+"speed": 5.0
+}]
+
+[node name="Pad" type="Node2D" unique_id=971105380]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1959793303]
+position = Vector2(84, 47.25)
+scale = Vector2(1.7, 1.7)
+sprite_frames = SubResource("SpriteFrames_8luev")
+animation = &"Pad_stepping"
+frame_progress = 0.0999312

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://4druyxol56qu"]
 
+[ext_resource type="Script" uid="uid://dlsb7vubeq28k" path="res://Scripts/Pad.gd" id="1_3chbe"]
 [ext_resource type="Texture2D" uid="uid://3ut3rwqjksns" path="res://Assests/images/Pad/Blue Plate.png" id="1_fde71"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3chbe"]
@@ -142,10 +143,13 @@ animations = [{
 }]
 
 [node name="Pad" type="Node2D" unique_id=971105380]
+script = ExtResource("1_3chbe")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1959793303]
-position = Vector2(84, 47.25)
+[node name="Area2D" type="Area2D" parent="." unique_id=304693839]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=1959793303]
+position = Vector2(360.99997, 393)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_8luev")
 animation = &"Pad_stepping"
-frame_progress = 0.0999312
+frame_progress = 0.35864735

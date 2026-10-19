@@ -27,7 +27,9 @@ func user_input (new_text: String) -> void:
 	if new_text == password && new_text.is_valid_int():
 		print("ready")
 		animated_sprite_2d.play("Lock_unlock")
-		
+		await animated_sprite_2d.animation_finished
+		animated_sprite_2d.queue_free()
+		line_edit.queue_free()
 
 	else:
 		print("incorrect passbroder")

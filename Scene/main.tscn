@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
-[ext_resource type="Script" uid="uid://bh2xpjm0jtyit" path="res://Scripts/lock.gd" id="3_r34rm"]
 
 [node name="main" type="Node2D" unique_id=1453737810]
 
@@ -11,4 +10,3 @@ position = Vector2(1353.9999, -74.99999)
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
 position = Vector2(9, 3)
-script = ExtResource("3_r34rm")

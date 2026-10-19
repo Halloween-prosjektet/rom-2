@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3awy1ccjxcpx"]
 
-[ext_resource type="Script" uid="uid://cfpkle7qk22n2" path="res://Scripts/lock.gd" id="1_82rv1"]
+[ext_resource type="Script" uid="uid://bh2xpjm0jtyit" path="res://Scripts/lock.gd" id="1_82rv1"]
 [ext_resource type="Texture2D" uid="uid://d12yi44bfevl2" path="res://Assests/images/lock/Lock.png" id="1_xyr70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_82rv1"]
@@ -174,12 +174,8 @@ animations = [{
 script = ExtResource("1_82rv1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=318060056]
-
-position = Vector2(950, 460)
-scale = Vector2(2.2070313, 2.2070313)
-
 position = Vector2(965, 497)
-
+scale = Vector2(2.2070313, 2.2070313)
 sprite_frames = SubResource("SpriteFrames_xyhva")
 animation = &"Lock_fail"
 
@@ -188,9 +184,11 @@ offset_left = 621.0
 offset_top = 760.0
 offset_right = 1354.0
 offset_bottom = 940.0
+theme_override_font_sizes/font_size = 88
 placeholder_text = "Skriv Koden (tall)"
 max_length = 4
 
 [node name="Label" type="Label" parent="." unique_id=1363756465]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 133

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ut3rwqjksns"
-path="res://.godot/imported/Blue Plate.png-977ab6df2a5b07b12b7e21f530a175b4.ctex"
+uid="uid://baghdce4lajv8"
+path="res://.godot/imported/BluePlateON.png-85c950c54f71b8be3f7fe5f26a4acdd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/images/Pad/Blue Plate.png"
-dest_files=["res://.godot/imported/Blue Plate.png-977ab6df2a5b07b12b7e21f530a175b4.ctex"]
+source_file="res://Assests/images/Plates:door/BluePlateON.png"
+dest_files=["res://.godot/imported/BluePlateON.png-85c950c54f71b8be3f7fe5f26a4acdd9.ctex"]
 
 [params]
 

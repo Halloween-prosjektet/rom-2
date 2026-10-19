@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://bh2xpjm0jtyit" path="res://Scripts/lock.gd" id="1_82rv1"]
 [ext_resource type="Texture2D" uid="uid://d12yi44bfevl2" path="res://Assests/images/lock/Lock.png" id="1_xyr70"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8luev"]
+light_mode = 1
+
+[sub_resource type="Theme" id="Theme_82rv1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry5mw"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_82rv1"]
 atlas = ExtResource("1_xyr70")
 region = Rect2(0, 0, 256, 256)
@@ -172,6 +179,15 @@ animations = [{
 
 [node name="lock" type="Node2D" unique_id=1872613960]
 script = ExtResource("1_82rv1")
+
+[node name="Panel" type="Panel" parent="." unique_id=396758183]
+modulate = Color(0, 0, 0, 1)
+visibility_layer = 1023
+material = SubResource("CanvasItemMaterial_8luev")
+offset_right = 1916.0
+offset_bottom = 1080.0
+theme = SubResource("Theme_82rv1")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ry5mw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=318060056]
 position = Vector2(965, 497)

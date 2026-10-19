@@ -2,6 +2,7 @@ extends Node2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var line_edit: LineEdit = $LineEdit
 @onready var label: Label = $Label
+@onready var panel: Panel = $Panel
 
 const password = "1234"
 
@@ -30,6 +31,7 @@ func user_input (new_text: String) -> void:
 		await animated_sprite_2d.animation_finished
 		animated_sprite_2d.queue_free()
 		line_edit.queue_free()
+		panel.queue_free()
 
 	else:
 		print("incorrect passbroder")

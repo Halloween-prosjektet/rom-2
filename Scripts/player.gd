@@ -7,29 +7,32 @@ var last_direction : Vector2 = Vector2.RIGHT
 
 #	dette er det som runner functions.
 func _physics_process(delta: float) -> void:
-	
 	movements()
 	process_anime()
 	
 	move_and_slide()
 
 
+var can_move: bool = false
 
+
+func enable_movement() -> void:
+	can_move = true
 
 """ Så her er starten av movement på karakteren"""
-func movements() -> void: 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_vector("left", "right","up","down")
-	
-	if direction != Vector2.ZERO:
+func movements() -> void:
+	if not can_move:
+		velocity = Vector2.ZERO
+		return
 
+	var direction := Input.get_vector("left", "right", "up", "down")
+	if direction != Vector2.ZERO:
 		velocity = direction * SPEED
 		last_direction = direction
 	else: 
 		velocity = Vector2.ZERO
-
-
+		
+		
 func process_anime() -> void:
 	if velocity != Vector2.ZERO:
 		player_anime("Run", last_direction)

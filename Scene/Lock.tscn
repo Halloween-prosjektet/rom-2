@@ -184,8 +184,10 @@ script = ExtResource("1_82rv1")
 modulate = Color(0, 0, 0, 1)
 visibility_layer = 1023
 material = SubResource("CanvasItemMaterial_8luev")
-offset_right = 1916.0
-offset_bottom = 1080.0
+offset_left = -154.0
+offset_top = -96.0
+offset_right = 2129.2334
+offset_bottom = 1191.0
 theme = SubResource("Theme_82rv1")
 theme_override_styles/panel = SubResource("StyleBoxFlat_ry5mw")
 

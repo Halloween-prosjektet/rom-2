@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c4r8sh3a4y8uq"]
 
+[ext_resource type="Script" uid="uid://3isk4e6vol5f" path="res://Scripts/Control.gd" id="1_2wwxx"]
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 [ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="3_r34rm"]
@@ -21,6 +22,7 @@ size = Vector2(4.4554615, 8.244129)
 size = Vector2(3.7128944, 8.960396)
 
 [node name="main" type="Node2D" unique_id=1453737810]
+script = ExtResource("1_2wwxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2011380924]
 position = Vector2(961.00006, 594.49994)
@@ -46,10 +48,11 @@ polygon = PackedVector2Array(-0.72317505, -1.5258789e-05, 0, 18.834068, 60.02386
 polygon = PackedVector2Array(-332.6623, -264.48428, -320.36826, -264.48428, -324.70734, -302.69055, -342.06363, -302.69055, -335.55502, -291.3901, -333.3855, -265.56052)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D" unique_id=155975313]
+position = Vector2(-7.231833, -2.9596083)
 polygon = PackedVector2Array(-337.00137, -291.3901, -343.50998, -303.22867, -516.34973, -302.69055, -522.85834, -231.12103, -513.45703, -228.43045, -507.67157, -289.77576, -337.72455, -290.31387)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D" unique_id=2036287530]
-polygon = PackedVector2Array(-522.13513, -231.12103, -650.861, -231.12103, -652.3074, -142.3318, -650.861, 216.59192, -138.85034, 218.74438, -132.34174, 256.4126, -692.80536, 246.7265, -674.7259, -257.48877)
+polygon = PackedVector2Array(-525.7511, -235.9641, -656.6464, -237.57845, -657.3696, -140.17934, -658.0928, 221.435, -143.18945, 223.58746, -132.34174, 256.4126, -692.80536, 246.7265, -674.7259, -257.48877)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D" unique_id=230416461]
 scale = Vector2(0.9999999, 1)
@@ -95,5 +98,4 @@ position = Vector2(210.89105, 183.16832)
 shape = SubResource("RectangleShape2D_oq0d1")
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
-visible = false
 position = Vector2(9, 3)

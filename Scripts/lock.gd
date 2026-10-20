@@ -12,7 +12,7 @@ var old_text: String = ""
 func _ready():
 	regex.compile("[^0-9]")
 	line_edit.text_submitted.connect(user_input)
-	line_edit.text_submitted.connect(user_input)
+
 	line_edit.text_changed.connect(_check_user)
 
 func _check_user(new_text: String) -> void:

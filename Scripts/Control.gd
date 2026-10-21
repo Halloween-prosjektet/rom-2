@@ -13,7 +13,7 @@ func _ready() -> void:
 
 	# Koble signalene før run(), så ingen blir gått glipp av.
 	
-	#ta på denne 
+	#ta på denne når du skal kjøre spillet på ekte. 
 	#client.add_loading_screen()
 	client.player_incoming.connect(_on_player_incoming)
 	client.player_left.connect(_on_player_left)

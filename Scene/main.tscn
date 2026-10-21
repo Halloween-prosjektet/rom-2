@@ -98,4 +98,5 @@ position = Vector2(210.89105, 183.16832)
 shape = SubResource("RectangleShape2D_oq0d1")
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
+visible = false
 position = Vector2(9, 3)

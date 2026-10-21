@@ -1,8 +1,28 @@
 [gd_scene format=3 uid="uid://dhfgplyhqviwh"]
 
-[ext_resource type="Script" uid="uid://ghq4ajc0y1h1" path="res://pressure_plate.gd" id="1_50eo6"]
 [ext_resource type="Texture2D" uid="uid://defpnjkl7lyft" path="res://Assests/images/Plates:door/BluePlateOFF.png" id="2_o2k2c"]
 [ext_resource type="Texture2D" uid="uid://baghdce4lajv8" path="res://Assests/images/Plates:door/BluePlateON.png" id="3_rbm0w"]
+
+[sub_resource type="GDScript" id="GDScript_7mfka"]
+script/source = "extends Area2D
+ 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+ 
+func _ready() -> void:
+	print(\"Plate ready\")
+	sprite.play(\"Off\")
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+ 
+func _on_body_entered(body: Node2D) -> void:
+	print(\"entered: \", body.name, \" groups: \", body.get_groups())
+	if body.is_in_group(\"player\"):
+		sprite.play(\"on\")
+ 
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group(\"player\"):
+		sprite.play(\"off\")
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vk8fu"]
 animations = [{
@@ -26,8 +46,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwixg"]
 size = Vector2(88, 69)
 
-[node name="PressurePlate" type="Area2D" unique_id=1677498067]
-script = ExtResource("1_50eo6")
+[node name="PressurePlateBlue" type="Area2D" unique_id=1677498067]
+script = SubResource("GDScript_7mfka")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1166772029]
 sprite_frames = SubResource("SpriteFrames_vk8fu")

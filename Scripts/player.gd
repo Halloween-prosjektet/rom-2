@@ -44,7 +44,7 @@ func player_anime(prefix: String, dir: Vector2) -> void:
 	
 	if dir.x != 0:
 		#for left and right
-		animated_sprite_2d.flip_h = dir.x < 0
+		animated_sprite_2d.flip_h = dir.x > 0
 		animated_sprite_2d.play(prefix + "_right")
 	elif dir.y < 0:
 		#for up

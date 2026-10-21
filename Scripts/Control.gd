@@ -31,7 +31,7 @@ func start_playing() -> void:
 func player_won() -> void:
 	print("Spilleren er ferdig! Sjekker med kontrollrommet...")
 	client.finish_game()
-
+	
 
 func _on_player_left(username: String) -> void:
 	print("Spilleren ", username, " gikk og kommer ikke likevel.")

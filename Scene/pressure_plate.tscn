@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dhfgplyhqviwh"]
+
+[ext_resource type="Script" uid="uid://ghq4ajc0y1h1" path="res://pressure_plate.gd" id="1_50eo6"]
+[ext_resource type="Texture2D" uid="uid://defpnjkl7lyft" path="res://Assests/images/Plates:door/BluePlateOFF.png" id="2_o2k2c"]
+[ext_resource type="Texture2D" uid="uid://baghdce4lajv8" path="res://Assests/images/Plates:door/BluePlateON.png" id="3_rbm0w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vk8fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o2k2c")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rbm0w")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwixg"]
+size = Vector2(88, 69)
+
+[node name="PressurePlate" type="Area2D" unique_id=1677498067]
+script = ExtResource("1_50eo6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1166772029]
+sprite_frames = SubResource("SpriteFrames_vk8fu")
+animation = &"off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388680707]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_hwixg")

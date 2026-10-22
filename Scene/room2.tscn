@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://c0elavttjlih2"]
 
-[ext_resource type="Texture2D" uid="uid://cqxojq25knhsg" path="res://Assests/images/Map/Rommedroedpad.png" id="1_42baq"]
+[ext_resource type="Script" uid="uid://be2xhcpvpg8tx" path="res://Scripts/room_2.gd" id="1_42baq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
+size = Vector2(58, 35)
 
 [node name="Room2" type="Node2D" unique_id=1656855243]
+script = ExtResource("1_42baq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=968772561]
-position = Vector2(940, 699)
-scale = Vector2(2.5817711, 2.4268517)
-texture = ExtResource("1_42baq")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=662811009]
+position = Vector2(40, 24)
+shape = SubResource("RectangleShape2D_8luev")
+
+[node name="spawn" type="Marker2D" parent="." unique_id=2030294398]

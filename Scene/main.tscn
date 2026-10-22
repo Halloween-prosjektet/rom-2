@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 [ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="3_r34rm"]
-[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/room2.tscn" id="6_1xcnr"]
+[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="6_1xcnr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
 size = Vector2(11.039547, 8.960396)
@@ -34,9 +34,8 @@ script = ExtResource("1_2wwxx")
 
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("6_1xcnr")]
 
-[node name="Sprite2D2" type="Sprite2D" parent="Room2" unique_id=1236382057]
-
 [node name="første lvl" type="Sprite2D" parent="." unique_id=2011380924]
+visible = false
 position = Vector2(961.00006, 594.49994)
 scale = Vector2(1.3827837, 1.8583333)
 texture = ExtResource("3_r34rm")

@@ -4,16 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 [ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="3_r34rm"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_8luev"]
-a = Vector2(0, 11.881187)
-b = Vector2(-0.49499512, 34.653465)
+[ext_resource type="Script" uid="uid://cbup8o4w7t1cg" path="res://Scripts/Door.gd" id="5_3amdw"]
+[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/room2.tscn" id="6_1xcnr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
-size = Vector2(18.118637, 14.9505005)
+size = Vector2(11.039547, 8.960396)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8luev"]
-radius = 11.223538
+radius = 7.359494
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
 size = Vector2(4.4554615, 8.244129)
@@ -21,8 +19,26 @@ size = Vector2(4.4554615, 8.244129)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq0d1"]
 size = Vector2(3.7128944, 8.960396)
 
+[sub_resource type="Gradient" id="Gradient_2wwxx"]
+offsets = PackedFloat32Array(0.014150944, 0.7075472)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8luev"]
+gradient = SubResource("Gradient_2wwxx")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.47941175, 0.47941175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0dvu"]
+size = Vector2(245, 103.5)
+
 [node name="main" type="Node2D" unique_id=1453737810]
 script = ExtResource("1_2wwxx")
+
+[node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("6_1xcnr")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Room2" unique_id=1236382057]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2011380924]
 position = Vector2(961.00006, 594.49994)
@@ -70,32 +86,41 @@ scale = Vector2(0.9999999, 1)
 polygon = PackedVector2Array(46.283447, 220.35876, 41.944336, 251.56952, 56.407898, 261.2556, 61.470154, 220.35876, 47.729797, 219.28253)
 
 [node name="Player" parent="." unique_id=617059282 instance=ExtResource("1_f6udf")]
-position = Vector2(1205, -75)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1981879384]
-position = Vector2(202.47525, 123.26733)
-shape = SubResource("SegmentShape2D_8luev")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CollisionShape2D" unique_id=338732592]
-position = Vector2(29.207926, 2.3245811e-06)
-shape = SubResource("SegmentShape2D_8luev")
+position = Vector2(506, 636)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=361809929]
-position = Vector2(216.33661, 169.80197)
+position = Vector2(191.58417, 171.28712)
 shape = SubResource("RectangleShape2D_8luev")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Player" unique_id=368597004]
-position = Vector2(216.8317, 127.72278)
+position = Vector2(191.58417, 150.99011)
 rotation = 2.3980825
 shape = SubResource("CircleShape2D_8luev")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Player" unique_id=1374602546]
-position = Vector2(222.27719, 183.16832)
+position = Vector2(196.53467, 187.12871)
 shape = SubResource("RectangleShape2D_5qp7w")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Player" unique_id=1163652873]
-position = Vector2(210.89105, 183.16832)
+position = Vector2(185.64359, 187.12871)
 shape = SubResource("RectangleShape2D_oq0d1")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=501128161]
+position = Vector2(192.57426, 166.33664)
+color = Color(0.39118537, 0.39118534, 0.39118534, 1)
+energy = 2.48
+texture = SubResource("GradientTexture2D_8luev")
+texture_scale = 4.25
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1721555689]
+color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
 position = Vector2(9, 3)
+
+[node name="Door" type="Area2D" parent="." unique_id=2104302734]
+script = ExtResource("5_3amdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1710985056]
+position = Vector2(1220, 69)
+shape = SubResource("RectangleShape2D_e0dvu")

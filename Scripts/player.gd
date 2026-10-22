@@ -54,3 +54,8 @@ func player_anime(prefix: String, dir: Vector2) -> void:
 		animated_sprite_2d.play(prefix +"_down")
 #NOTE 
 """ Så her er slutten av movement på karakteren"""
+
+
+func _on_nextlvl_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		print("welcome")

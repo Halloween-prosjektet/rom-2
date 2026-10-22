@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cud8rbpvyu83s"]
+
+[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="1_0wwod"]
+
+[node name="Level2" type="Node2D" unique_id=1432768770]
+
+[node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
+door_tag = "lvl2_entry"
+destination_level_tag = "lvl1"
+destination_door_tag = "lvl1_exit"

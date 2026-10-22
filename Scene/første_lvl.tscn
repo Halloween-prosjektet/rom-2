@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cvdd5w8x4gats"]
+
+[ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="1_7kpmo"]
+[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="2_apcmy"]
+
+[node name="første lvl" type="Sprite2D" unique_id=1110714650]
+scale = Vector2(1.3827837, 1.8583333)
+texture = ExtResource("1_7kpmo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1977926148]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=970612457]
+position = Vector2(333.38547, -272.55603)
+scale = Vector2(0.86397064, 0.85937506)
+polygon = PackedVector2Array(2.8927002, -0.26904297, -59.30066, -13.99103, -53.51526, 47.354263, -46.283447, 48.430496, -44.11389, 45.739914, 47.729736, 45.739914, 49.176147, 48.968613, 54.238403, 48.968613, 26.757568, 27.982063, 56.40796, 45.739914, 62.19336, -12.914797, -59.30066, -13.99103, -60.74701, -15.605379, 4.3391113, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=890124298]
+position = Vector2(-118.60138, -230.0448)
+polygon = PackedVector2Array(1.4463501, 3.2286835, -17.356262, -1.6143646, -17.356262, 160.89685, 135.95764, 161.43497, 135.95764, -2.152481, 215.50732, -1.0762482, 220.56958, -61.883423, 391.2398, -61.345306, 397.7484, -1.6143646, 401.36426, 0.5381012, 407.87292, -1.5258789e-05, 403.5338, -72.64575, 212.61462, -74.2601, -17.356262, -2.152481)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=253347305]
+position = Vector2(-195.98152, -251.03134)
+polygon = PackedVector2Array(-0.72317505, -1.5258789e-05, 0, 18.834068, 60.023865, 19.372185, 61.470215, -12.914814, -136.68079, -12.914814, -134.51126, 20.986534, -128.00266, 23.677116, -124.38675, 19.910301, 59.30066, 19.910301)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=857666947]
+polygon = PackedVector2Array(-332.6623, -264.48428, -320.36826, -264.48428, -324.70734, -302.69055, -342.06363, -302.69055, -335.55502, -291.3901, -333.3855, -265.56052)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1678728892]
+position = Vector2(-7.231833, -2.9596083)
+polygon = PackedVector2Array(-337.00137, -291.3901, -343.50998, -303.22867, -516.34973, -302.69055, -522.85834, -231.12103, -513.45703, -228.43045, -507.67157, -289.77576, -337.72455, -290.31387)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1924671136]
+polygon = PackedVector2Array(-525.7511, -235.9641, -656.6464, -237.57845, -657.3696, -140.17934, -658.0928, 221.435, -143.18945, 223.58746, -132.34174, 256.4126, -692.80536, 246.7265, -674.7259, -257.48877)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1257972507]
+scale = Vector2(0.9999999, 1)
+polygon = PackedVector2Array(-133.06494, 253.72198, 49.899292, 254.26013, 54.961548, 261.2556, -139.57355, 265.56055)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1096299269]
+polygon = PackedVector2Array(48.45294, 220.35876, 398.4715, 220.35876, 653.7537, 218.2063, 655.2, -232.73538, 699.3139, -234.88786, 692.80536, 253.72198, 42.66754, 255.33636)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2102315189]
+position = Vector2(-4.4139335e-05, -2.9596083)
+polygon = PackedVector2Array(389.07025, -282.24213, 394.85565, -290.31387, 566.24896, -290.31387, 569.1418, -245.11208, 574.20404, -229.50668, 653.7537, -230.58292, 702.9299, -235.42598, 559.0173, -311.3004, 372.43707, -305.38113)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=370694371]
+scale = Vector2(0.9999999, 1)
+polygon = PackedVector2Array(46.283447, 220.35876, 41.944336, 251.56952, 56.407898, 261.2556, 61.470154, 220.35876, 47.729797, 219.28253)
+
+[node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("2_apcmy")]
+position = Vector2(-694.97485, -319.91028)
+scale = Vector2(0.7231788, 0.5381166)
+door_tag = "lvl1_exit"
+destination_level_tag = "lvl2"
+destination_door_tag = "lvl2_entry"

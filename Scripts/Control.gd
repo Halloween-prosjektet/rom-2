@@ -3,6 +3,15 @@ extends Node2D
 var client: ControlRoomClient
 var player_name := ""  # spilleren rom 1 sendte over
 
+# --- Level switching (new) ---
+@onready var player = $Player
+@onready var current_level = $lvl1
+
+var levels = {
+	"lvl1": preload("res://Scene/første_lvl.tscn"),
+	"lvl2": preload("res://Scene/level_2.tscn"),
+}
+
 func _ready() -> void:
 	client = ControlRoomClient.new("ws://172.31.0.200:7321", 2)
 
@@ -20,6 +29,8 @@ func _ready() -> void:
 	client.game_finish_wait.connect(_on_game_finish_wait)
 	client.game_finish_ok.connect(_on_game_finish_ok)
 	client.run()
+
+	_connect_doors()  # new
 
 # Rom 1 er ferdig: spilleren er på vei hit.
 func _on_player_incoming(username: String, _player_data: Variant) -> void:
@@ -49,3 +60,24 @@ func _on_game_finish_ok() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
 		player_won()
+
+# --- Level switching (new) ---
+func _connect_doors() -> void:
+	for door in get_tree().get_nodes_in_group("doors"):
+		if current_level.is_ancestor_of(door) and not door.player_entered.is_connected(_on_door_entered):
+			door.player_entered.connect(_on_door_entered)
+
+func _on_door_entered(door) -> void:
+	call_deferred("change_level", door.destination_level_tag, door.destination_door_tag)
+
+func change_level(level_tag: String, door_tag: String) -> void:
+	current_level.queue_free()
+	current_level = levels[level_tag].instantiate()
+	add_child(current_level)
+	move_child(current_level, 0)
+	_connect_doors()
+
+	for door in get_tree().get_nodes_in_group("doors"):
+		if current_level.is_ancestor_of(door) and door.door_tag == door_tag:
+			player.global_position = door.spawn.global_position
+			break

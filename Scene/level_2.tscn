@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cud8rbpvyu83s"]
+
+[ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="1_0wwod"]
+[ext_resource type="Texture2D" uid="uid://cqxojq25knhsg" path="res://Assests/images/Map/Rommedroedpad.png" id="1_rj34r"]
+
+[node name="Level2" type="Node2D" unique_id=1432768770]
+
+[node name="Rommedroedpad" type="Sprite2D" parent="." unique_id=1766343405]
+position = Vector2(926.99994, 701.1875)
+scale = Vector2(2.5770833, 2.149653)
+texture = ExtResource("1_rj34r")
+
+[node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
+door_tag = "lvl2_entry"
+destination_level_tag = "lvl1"
+destination_door_tag = "lvl1_exit"

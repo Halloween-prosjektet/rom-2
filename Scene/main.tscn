@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://3isk4e6vol5f" path="res://Scripts/Control.gd" id="1_2wwxx"]
 [ext_resource type="PackedScene" uid="uid://b0q6dooyc4ct1" path="res://Scene/player.tscn" id="1_f6udf"]
 [ext_resource type="PackedScene" uid="uid://cvdd5w8x4gats" path="res://Scene/første_lvl.tscn" id="2_2wwxx"]
+[ext_resource type="PackedScene" uid="uid://cud8rbpvyu83s" path="res://Scene/level_2.tscn" id="2_3amdw"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
@@ -31,11 +32,12 @@ fill_from = Vector2(0.47941175, 0.47941175)
 [node name="main" type="Node2D" unique_id=1453737810]
 script = ExtResource("1_2wwxx")
 
+[node name="Level2" parent="." unique_id=1432768770 instance=ExtResource("2_3amdw")]
+
 [node name="lvl1" parent="." unique_id=1110714650 instance=ExtResource("2_2wwxx")]
 position = Vector2(961.00006, 594.49994)
 
 [node name="Player" parent="." unique_id=617059282 groups=["Player"] instance=ExtResource("1_f6udf")]
-visible = false
 position = Vector2(506, 636)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=361809929]
@@ -63,9 +65,7 @@ texture = SubResource("GradientTexture2D_8luev")
 texture_scale = 4.25
 
 [node name="lys" type="CanvasModulate" parent="." unique_id=1721555689]
-visible = false
 color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
-visible = false
 position = Vector2(9, 3)

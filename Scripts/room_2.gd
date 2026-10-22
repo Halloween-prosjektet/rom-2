@@ -1,7 +1,7 @@
 extends Area2D
 class_name Door
 
-signal player_entered(door: Door)
+signal player_entered(door)
 
 @export var door_tag: String
 @export var destination_level_tag: String

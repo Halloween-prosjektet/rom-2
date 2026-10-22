@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://be2xhcpvpg8tx" path="res://Scripts/room_2.gd" id="1_42baq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
-size = Vector2(501, 183.5)
+size = Vector2(388.5, 155.75)
 
 [node name="Door" type="Area2D" unique_id=700100492]
 position = Vector2(75, 80)
 script = ExtResource("1_42baq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=662811009]
-position = Vector2(1301, 11)
+position = Vector2(1244.75, -2.875)
 shape = SubResource("RectangleShape2D_8luev")
 
 [node name="spawn" type="Marker2D" parent="." unique_id=2030294398]
-position = Vector2(297, 840)
+position = Vector2(1224, 992)

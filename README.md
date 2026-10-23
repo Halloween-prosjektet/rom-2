@@ -68,3 +68,9 @@ skal lage:
 
 pressure plates som du må sto på og de er active for 10 sek og de åpner noe knapper som gjør det samma, 
 og de er kobla til lys, og lyd i virkeligheter. 
+
+
+TO RUN ON THE DAMMED PI> cd ~/Desktop/Spill
+chmod +x Rom2.arm64
+
+./Rom2.arm64

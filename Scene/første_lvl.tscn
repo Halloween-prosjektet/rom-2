@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="2_apcmy"]
 
 [node name="første lvl" type="Sprite2D" unique_id=1110714650]
+position = Vector2(961.00006, 594.49994)
 scale = Vector2(1.3827837, 1.8583333)
 texture = ExtResource("1_7kpmo")
 

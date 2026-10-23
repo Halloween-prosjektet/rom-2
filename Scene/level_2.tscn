@@ -6,11 +6,20 @@
 [node name="Level2" type="Node2D" unique_id=1432768770]
 
 [node name="Rommedroedpad" type="Sprite2D" parent="." unique_id=1766343405]
-position = Vector2(926.99994, 701.1875)
-scale = Vector2(2.5770833, 2.149653)
+position = Vector2(1028.0001, 748.00006)
+scale = Vector2(2.9760418, 2.5574074)
 texture = ExtResource("1_rj34r")
 
+[node name="Area2D" type="Area2D" parent="Rommedroedpad" unique_id=485135121]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rommedroedpad/Area2D" unique_id=1885276496]
+polygon = PackedVector2Array(-343.07318, -289.74658, -347.7774, 127.47281, -227.14738, 129.0369, -228.82747, 76.249054, -310.14352, 75.85803, -306.11133, -231.87549, -230.84357, -227.57425, -228.82747, -292.0927, -45.026306, -293.26578, -41.33011, -234.61263, 57.79483, -233.04855, 63.84314, -296.78497, 255.70874, -297.95804, 256.7168, -224.44608, 324.59216, -223.27301, 335.34467, -227.57425, 337.36078, 75.07599, 336.68878, 91.10785, 263.43707, 82.89642, 255.03668, 139.59445, 74.9317, 142.72263, 77.61981, 157.58142, 344.4171, 135.29321, 352.81757, -177.91458, 293.6786, -297.56702, -38.30597, -304.21436)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Rommedroedpad/Area2D" unique_id=1531077296]
+polygon = PackedVector2Array(-34.273773, 81.72336, -36.289856, 151.7161, 71.57153, 152.88916, 63.171112, 78.20416)
+
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
+position = Vector2(0, 0)
 door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"

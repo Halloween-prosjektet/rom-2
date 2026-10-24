@@ -32,5 +32,5 @@ door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"
 
-[node name="spawn2" type="Marker2D" parent="Room2" unique_id=1482023547]
-position = Vector2(1130, -77)
+[node name="spawn" parent="Room2" index="1"]
+position = Vector2(1190, -41)

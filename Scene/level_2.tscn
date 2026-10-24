@@ -27,7 +27,10 @@ polygon = PackedVector2Array(-220, -2000, 255, -2000, 255, -290, 57.889038, -295
 polygon = PackedVector2Array(-226.14828, 131.48077, -40.98633, 131.48073, -32.180237, 87.48016, 60.016632, 90.30588, 65.69031, 131.48077, 69.186905, 130.93721, 252.9209, 128.25134, 253.63007, 79.00299, 325.96918, 78.19562, 255, 2000, 10.833252, 1999.9999, -220, 2000)
 
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
-position = Vector2(-283.03, 107.645)
+position = Vector2(-716, 970)
 door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"
+
+[node name="spawn2" type="Marker2D" parent="Room2" unique_id=1482023547]
+position = Vector2(1130, -77)

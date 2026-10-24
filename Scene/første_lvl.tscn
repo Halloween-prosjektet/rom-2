@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="2_apcmy"]
 
 [node name="første lvl" type="Sprite2D" unique_id=1110714650]
+position = Vector2(961.00006, 594.49994)
 scale = Vector2(1.3827837, 1.8583333)
 texture = ExtResource("1_7kpmo")
 
@@ -48,7 +49,7 @@ scale = Vector2(0.9999999, 1)
 polygon = PackedVector2Array(46.283447, 220.35876, 41.944336, 251.56952, 56.407898, 261.2556, 61.470154, 220.35876, 47.729797, 219.28253)
 
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("2_apcmy")]
-position = Vector2(-694.97485, -319.91028)
+position = Vector2(-719.56305, -286.54706)
 scale = Vector2(0.7231788, 0.5381166)
 door_tag = "lvl1_exit"
 destination_level_tag = "lvl2"

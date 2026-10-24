@@ -6,6 +6,7 @@ var player_name := ""  # spilleren rom 1 sendte over
 # --- Level switching (new) ---
 @onready var player = $Player
 @onready var current_level = $lvl1
+var _changing_level := false
 
 var levels = {
 	"lvl1": preload("res://Scene/første_lvl.tscn"),
@@ -23,7 +24,7 @@ func _ready() -> void:
 	# Koble signalene før run(), så ingen blir gått glipp av.
 	
 	#ta på denne når du skal kjøre spillet på ekte. 
-	client.add_loading_screen()
+	#client.add_loading_screen()
 	client.player_incoming.connect(_on_player_incoming)
 	client.player_left.connect(_on_player_left)
 	client.game_finish_wait.connect(_on_game_finish_wait)
@@ -57,8 +58,9 @@ func _on_game_finish_wait(max_wait: Variant) -> void:
 func _on_game_finish_ok() -> void:
 	print("Klart! Spilleren kan gå videre til rom 3.")
 
+# Debug only: F9 finishes the game.
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_F9:
 		player_won()
 
 # --- Level switching (new) ---
@@ -68,16 +70,30 @@ func _connect_doors() -> void:
 			door.player_entered.connect(_on_door_entered)
 
 func _on_door_entered(door) -> void:
+	if _changing_level:
+		return
+	if door.is_finish:
+		player_won()
+		return
+	_changing_level = true
 	call_deferred("change_level", door.destination_level_tag, door.destination_door_tag)
 
 func change_level(level_tag: String, door_tag: String) -> void:
-	current_level.queue_free()
+	if not levels.has(level_tag):
+		_changing_level = false
+		return
+
+	var old_level = current_level
 	current_level = levels[level_tag].instantiate()
 	add_child(current_level)
 	move_child(current_level, 0)
+	if old_level:
+		old_level.queue_free()
 	_connect_doors()
 
 	for door in get_tree().get_nodes_in_group("doors"):
 		if current_level.is_ancestor_of(door) and door.door_tag == door_tag:
 			player.global_position = door.spawn.global_position
+			door.disable_until_exit()
 			break
+	_changing_level = false

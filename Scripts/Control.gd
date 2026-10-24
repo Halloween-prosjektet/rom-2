@@ -58,8 +58,9 @@ func _on_game_finish_wait(max_wait: Variant) -> void:
 func _on_game_finish_ok() -> void:
 	print("Klart! Spilleren kan gå videre til rom 3.")
 
+# Debug only: F9 finishes the game.
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_F9:
 		player_won()
 
 # --- Level switching (new) ---
@@ -70,6 +71,9 @@ func _connect_doors() -> void:
 
 func _on_door_entered(door) -> void:
 	if _changing_level:
+		return
+	if door.is_finish:
+		player_won()
 		return
 	_changing_level = true
 	call_deferred("change_level", door.destination_level_tag, door.destination_door_tag)

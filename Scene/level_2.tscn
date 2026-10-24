@@ -6,8 +6,8 @@
 [node name="Level2" type="Node2D" unique_id=1432768770]
 
 [node name="Rommedroedpad" type="Sprite2D" parent="." unique_id=1766343405]
-position = Vector2(887.74994, 722.00006)
-scale = Vector2(2.7679687, 2.4137378)
+position = Vector2(937.74994, 756.2908)
+scale = Vector2(2.8200521, 2.4772391)
 texture = ExtResource("1_rj34r")
 
 [node name="Area2D" type="Area2D" parent="Rommedroedpad" unique_id=485135121]
@@ -19,7 +19,7 @@ polygon = PackedVector2Array(-343.07318, -289.74658, -347.7774, 127.47281, -227.
 polygon = PackedVector2Array(-34.273773, 81.72336, -36.289856, 151.7161, 71.57153, 152.88916, 63.171112, 78.20416)
 
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
-position = Vector2(-93, -32)
+position = Vector2(-949, 462)
 door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"

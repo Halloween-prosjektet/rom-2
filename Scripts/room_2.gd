@@ -7,7 +7,7 @@ signal player_entered(door)
 @export var destination_level_tag: String
 @export var destination_door_tag: String
 @export var spawn_direction = "up"
-
+@export var is_finish: bool = false
 @onready var spawn = $spawn
 
 var armed: bool = true

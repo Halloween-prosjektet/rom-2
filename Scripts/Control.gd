@@ -8,6 +8,13 @@ var player_name := ""  # spilleren rom 1 sendte over
 @onready var current_level = $lvl1
 var _changing_level := false
 
+# Offset from each door's spawn marker, by the door the player arrives at.
+# Negative y is up, positive y is down.
+const SPAWN_OFFSETS := {
+	"lvl2_entry": Vector2(-50, -50),  # arriving in lvl2: 50px left and up
+	"lvl1_exit": Vector2(0, 20),      # arriving back in lvl1: 20px down
+}
+
 var levels = {
 	"lvl1": preload("res://Scene/første_lvl.tscn"),
 	"lvl2": preload("res://Scene/level_2.tscn"),
@@ -93,7 +100,11 @@ func change_level(level_tag: String, door_tag: String) -> void:
 
 	for door in get_tree().get_nodes_in_group("doors"):
 		if current_level.is_ancestor_of(door) and door.door_tag == door_tag:
-			player.global_position = door.spawn.global_position
+			# The sprite is offset from the Player's origin, so cancel that out
+			var sprite: Node2D = player.get_node("AnimatedSprite2D")
+			var body_offset: Vector2 = sprite.global_position - player.global_position
+			var offset: Vector2 = SPAWN_OFFSETS.get(door_tag, Vector2.ZERO)
+			player.global_position = door.spawn.global_position + offset - body_offset
 			door.disable_until_exit()
 			break
 	_changing_level = false

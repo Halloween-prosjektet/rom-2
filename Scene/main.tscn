@@ -8,9 +8,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
 size = Vector2(11.039547, 8.960396)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8luev"]
-radius = 7.359494
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
 size = Vector2(4.4554615, 8.244129)
 
@@ -39,11 +36,6 @@ position = Vector2(506, 636)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=361809929]
 position = Vector2(191.58417, 171.28712)
 shape = SubResource("RectangleShape2D_8luev")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player" unique_id=368597004]
-position = Vector2(191.58417, 150.99011)
-rotation = 2.3980825
-shape = SubResource("CircleShape2D_8luev")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Player" unique_id=1374602546]
 position = Vector2(196.53467, 187.12871)

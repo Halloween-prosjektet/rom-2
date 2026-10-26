@@ -31,6 +31,3 @@ position = Vector2(-716, 970)
 door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"
-
-[node name="spawn" parent="Room2" index="1"]
-position = Vector2(1190, -41)

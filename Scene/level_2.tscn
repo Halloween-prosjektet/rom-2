@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://cud8rbpvyu83s"]
 
 [ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="1_0wwod"]
+[ext_resource type="Script" uid="uid://blx4eoeyq5t3e" path="res://Scripts/level_2.gd" id="1_a5oyc"]
 [ext_resource type="Texture2D" uid="uid://cqxojq25knhsg" path="res://Assests/images/Map/Rommedroedpad.png" id="1_rj34r"]
 [ext_resource type="PackedScene" uid="uid://lmc8mjhpr6si" path="res://Scene/pressure_plate_green.tscn" id="2_yiryk"]
 [ext_resource type="Texture2D" uid="uid://0mx7bdpn2o5j" path="res://Assests/images/Map/Rommedgulpad.png" id="4_louwq"]
+[ext_resource type="Script" uid="uid://b0kjryi2txejt" path="res://Scripts/rom_3.gd" id="5_7sdqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
+size = Vector2(468.5, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq0d1"]
+size = Vector2(459, 87)
 
 [node name="Level2" type="Node2D" unique_id=1432768770]
+script = ExtResource("1_a5oyc")
+
+[node name="Room3Barrier" type="StaticBody2D" parent="." unique_id=119186935]
+scale = Vector2(1, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Barrier" unique_id=2060312190]
+position = Vector2(570, 72)
+shape = SubResource("RectangleShape2D_5qp7w")
 
 [node name="Rommedroedpad" type="Sprite2D" parent="." unique_id=1766343405]
 position = Vector2(937.74994, 756.2908)
@@ -38,7 +54,14 @@ door_tag = "lvl2_entry"
 destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=511556863]
-position = Vector2(620, -496.00003)
+[node name="Rom3" type="Sprite2D" parent="." unique_id=511556863]
+position = Vector2(623, -547.00006)
 scale = Vector2(1.6453125, 1.8388889)
 texture = ExtResource("4_louwq")
+script = ExtResource("5_7sdqy")
+
+[node name="Room3Trigger" type="Area2D" parent="." unique_id=699064132]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Trigger" unique_id=1632965520]
+position = Vector2(563, 61)
+shape = SubResource("RectangleShape2D_oq0d1")

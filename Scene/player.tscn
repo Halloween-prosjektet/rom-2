@@ -433,14 +433,38 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6qlh"]
+size = Vector2(11.039547, 8.960396)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2sw5t"]
+size = Vector2(4.4554615, 8.244129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij4jb"]
+size = Vector2(3.7128944, 8.960396)
+
 [node name="Player" type="CharacterBody2D" unique_id=617059282]
 scale = Vector2(2.02, 2.02)
 script = ExtResource("1_y8w33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110756496]
 texture_filter = 1
-position = Vector2(191.03917, 167.78696)
+position = Vector2(341.45343, 261.84637)
 scale = Vector2(0.48983493, 0.4835324)
 sprite_frames = SubResource("SpriteFrames_5qp7w")
 animation = &"Run_right"
 frame_progress = 0.32241002
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1624519662]
+position = Vector2(341.9485, 264.81662)
+shape = SubResource("RectangleShape2D_p6qlh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=583209694]
+position = Vector2(346.899, 280.6582)
+shape = SubResource("RectangleShape2D_2sw5t")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1044316885]
+position = Vector2(336.00787, 280.6582)
+shape = SubResource("RectangleShape2D_ij4jb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=305540752]
+position = Vector2(342.07916, 264.85147)

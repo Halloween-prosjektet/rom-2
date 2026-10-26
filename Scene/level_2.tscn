@@ -13,8 +13,15 @@ size = Vector2(468.5, 41)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq0d1"]
 size = Vector2(459, 87)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2cmd"]
+size = Vector2(1060, 1042)
+
 [node name="Level2" type="Node2D" unique_id=1432768770]
 script = ExtResource("1_a5oyc")
+
+[node name="Room3Spawn" type="Marker2D" parent="." unique_id=1713788723]
+position = Vector2(547, -189)
+gizmo_extents = 81.4
 
 [node name="Room3Barrier" type="StaticBody2D" parent="." unique_id=119186935]
 scale = Vector2(1, 1.0000001)
@@ -33,14 +40,14 @@ texture = ExtResource("1_rj34r")
 [node name="WallLeft" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=1697572594]
 position = Vector2(-97.07266, -0.117377244)
 scale = Vector2(0.96174484, 1)
-polygon = PackedVector2Array(-2000, -2000, -220, -2000, -131.03104, -296.41498, -139.51134, -224.56079, -219.15234, -226.57916, -219.52106, 81.42502, -143.19843, 79.81033, -138.0365, 1993.231, -2000, 2000)
+polygon = PackedVector2Array(-2000, -2000, -220, -2000, 115.03702, -645.8804, -55.674957, -647.49506, -192.09706, -647.89874, -205.00186, -679.3854, -204.63315, -385.9135, -128.31052, -377.03265, -131.03104, -296.41498, -139.51134, -224.56079, -219.15234, -226.57916, -219.52106, 81.42502, -143.19843, 79.81033, -138.0365, 1993.231, -2000, 2000)
 
 [node name="WallRight" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=637881350]
 polygon = PackedVector2Array(326.27527, -1991.5225, 2071.2754, -1991.5225, 2071.2754, 2008.4775, 326.27527, 2008.4775, 326.27527, -227.52527, 257.17615, -229.40489)
 
 [node name="WallTop" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=1311665871]
 position = Vector2(3.9893093, 4.7267265)
-polygon = PackedVector2Array(-220, -2000, 255, -2000, 255, -290, 57.889038, -295.20395, 53.279175, -235.86371, -34.30786, -237.07472, -42.81833, -295.60764, 114.536896, -298.316)
+polygon = PackedVector2Array(-220, -2000, 255, -2000, 255, -290, 57.889038, -295.20395, 53.279175, -235.86371, -34.30786, -237.07472, -42.81833, -295.60764, -57.091156, -386.3172, 15.602539, -387.9319, 6.382843, -392.3723, 8.155884, -442.42804, 12.056519, -546.1726, 7.4466553, -651.1282)
 
 [node name="WallBottom" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=721317739]
 polygon = PackedVector2Array(-226.14828, 131.48077, -40.98633, 131.48073, -32.180237, 87.48016, 60.016632, 90.30588, 65.69031, 131.48077, 69.186905, 130.93721, 252.9209, 128.25134, 253.63007, 79.00299, 325.96918, 78.19562, 255, 2000, 10.833252, 1999.9999, -220, 2000)
@@ -55,13 +62,19 @@ destination_level_tag = "lvl1"
 destination_door_tag = "lvl1_exit"
 
 [node name="Rom3" type="Sprite2D" parent="." unique_id=511556863]
-position = Vector2(623, -547.00006)
-scale = Vector2(1.6453125, 1.8388889)
+position = Vector2(517, -524)
+scale = Vector2(1.8075545, 1.8388889)
 texture = ExtResource("4_louwq")
 script = ExtResource("5_7sdqy")
 
 [node name="Room3Trigger" type="Area2D" parent="." unique_id=699064132]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Trigger" unique_id=1632965520]
-position = Vector2(563, 61)
+position = Vector2(556, 103)
 shape = SubResource("RectangleShape2D_oq0d1")
+
+[node name="Room3Inside" type="Area2D" parent="." unique_id=953651040]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Inside" unique_id=2051567165]
+position = Vector2(520, -511)
+shape = SubResource("RectangleShape2D_j2cmd")

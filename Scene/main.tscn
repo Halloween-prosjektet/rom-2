@@ -5,15 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cvdd5w8x4gats" path="res://Scene/første_lvl.tscn" id="2_2wwxx"]
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
-size = Vector2(11.039547, 8.960396)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
-size = Vector2(4.4554615, 8.244129)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq0d1"]
-size = Vector2(3.7128944, 8.960396)
-
 [sub_resource type="Gradient" id="Gradient_2wwxx"]
 offsets = PackedFloat32Array(0.014150944, 0.7075472)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -31,19 +22,7 @@ script = ExtResource("1_2wwxx")
 [node name="lvl1" parent="." unique_id=1110714650 instance=ExtResource("2_2wwxx")]
 
 [node name="Player" parent="." unique_id=617059282 groups=["Player"] instance=ExtResource("1_f6udf")]
-position = Vector2(506, 636)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=361809929]
-position = Vector2(191.58417, 171.28712)
-shape = SubResource("RectangleShape2D_8luev")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Player" unique_id=1374602546]
-position = Vector2(196.53467, 187.12871)
-shape = SubResource("RectangleShape2D_5qp7w")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Player" unique_id=1163652873]
-position = Vector2(185.64359, 187.12871)
-shape = SubResource("RectangleShape2D_oq0d1")
+position = Vector2(420, 372)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=501128161]
 position = Vector2(192.57426, 166.33664)

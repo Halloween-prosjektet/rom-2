@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://rib4jft7qamo"]
+
+[ext_resource type="Texture2D" uid="uid://d1iopug8umgld" path="res://Assests/images/Plates:door/GreenPlateOFF.png" id="1_dklvy"]
+[ext_resource type="Texture2D" uid="uid://hx4jruy7plpe" path="res://Assests/images/Plates:door/GreenPlateON.png" id="2_0pap8"]
+
+[sub_resource type="GDScript" id="GDScript_7mfka"]
+script/source = "extends Area2D
+
+signal pressed
+signal released
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready() -> void:
+	sprite.play(\"off\")
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group(\"Player\"):
+		sprite.play(\"on\")
+		pressed.emit()
+
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group(\"Player\"):
+		sprite.play(\"off\")
+		released.emit()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vk8fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dklvy")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0pap8")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwixg"]
+size = Vector2(88, 69)
+
+[node name="PressurePlateGreen" type="Area2D" unique_id=1677498067]
+script = SubResource("GDScript_7mfka")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1166772029]
+modulate = Color(18.892157, 18.892157, 0, 1)
+self_modulate = Color(1, 1, 0, 1)
+sprite_frames = SubResource("SpriteFrames_vk8fu")
+animation = &"off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388680707]
+modulate = Color(0.8117647, 1, 1, 1)
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_hwixg")

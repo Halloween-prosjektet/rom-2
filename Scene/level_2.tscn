@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://lmc8mjhpr6si" path="res://Scene/pressure_plate_green.tscn" id="2_yiryk"]
 [ext_resource type="Texture2D" uid="uid://0mx7bdpn2o5j" path="res://Assests/images/Map/Rommedgulpad.png" id="4_louwq"]
 [ext_resource type="Script" uid="uid://b0kjryi2txejt" path="res://Scripts/rom_3.gd" id="5_7sdqy"]
+[ext_resource type="PackedScene" uid="uid://rib4jft7qamo" path="res://Scene/pressure_plate_yellow.tscn" id="7_43cbn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
 size = Vector2(468.5, 41)
@@ -52,9 +53,6 @@ polygon = PackedVector2Array(-220, -2000, 255, -2000, 255, -290, 57.889038, -295
 [node name="WallBottom" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=721317739]
 polygon = PackedVector2Array(-226.14828, 131.48077, -40.98633, 131.48073, -32.180237, 87.48016, 60.016632, 90.30588, 65.69031, 131.48077, 69.186905, 130.93721, 252.9209, 128.25134, 253.63007, 79.00299, 325.96918, 78.19562, 255, 2000, 10.833252, 1999.9999, -220, 2000)
 
-[node name="PressurePlateGreen" parent="." unique_id=1677498067 instance=ExtResource("2_yiryk")]
-position = Vector2(1382, 517)
-
 [node name="Room2" parent="." unique_id=1656855243 instance=ExtResource("1_0wwod")]
 position = Vector2(-716, 970)
 door_tag = "lvl2_entry"
@@ -67,6 +65,10 @@ scale = Vector2(1.8075545, 1.8388889)
 texture = ExtResource("4_louwq")
 script = ExtResource("5_7sdqy")
 
+[node name="PressurePlateYellow" parent="Rom3" unique_id=672420762 instance=ExtResource("7_43cbn")]
+position = Vector2(-8.298509, -81.57101)
+scale = Vector2(0.5532337, 0.5438067)
+
 [node name="Room3Trigger" type="Area2D" parent="." unique_id=699064132]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Trigger" unique_id=1632965520]
@@ -78,3 +80,6 @@ shape = SubResource("RectangleShape2D_oq0d1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3Inside" unique_id=2051567165]
 position = Vector2(520, -511)
 shape = SubResource("RectangleShape2D_j2cmd")
+
+[node name="PressurePlateGreen2" parent="." unique_id=1577362278 instance=ExtResource("2_yiryk")]
+position = Vector2(1382, 517)

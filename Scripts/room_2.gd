@@ -30,3 +30,4 @@ func _on_body_exited(body):
 
 func disable_until_exit() -> void:
 	armed = false
+	

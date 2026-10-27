@@ -53,9 +53,12 @@ size = Vector2(88, 69)
 script = SubResource("GDScript_7mfka")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1166772029]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
 sprite_frames = SubResource("SpriteFrames_vk8fu")
-animation = &"on"
+animation = &"off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388680707]
+modulate = Color(0.8117647, 1, 1, 1)
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_hwixg")

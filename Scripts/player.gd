@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 300.0
+const SPEED = 1000.0
 var last_direction : Vector2 = Vector2.RIGHT
 
 #	dette er det som runner functions.

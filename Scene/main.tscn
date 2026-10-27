@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3awy1ccjxcpx" path="res://Scene/Lock.tscn" id="2_sblpm"]
 
 [sub_resource type="Gradient" id="Gradient_2wwxx"]
-offsets = PackedFloat32Array(0.014150944, 0.7075472)
+offsets = PackedFloat32Array(0.014150944, 0.5471698)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8luev"]
@@ -14,7 +14,7 @@ gradient = SubResource("Gradient_2wwxx")
 width = 200
 height = 200
 fill = 1
-fill_from = Vector2(0.47941175, 0.47941175)
+fill_from = Vector2(0.5264706, 0.57941175)
 
 [node name="main" type="Node2D" unique_id=1453737810]
 script = ExtResource("1_2wwxx")
@@ -25,11 +25,15 @@ script = ExtResource("1_2wwxx")
 position = Vector2(420, 372)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=501128161]
-position = Vector2(192.57426, 166.33664)
+position = Vector2(338.61386, 253.96039)
 color = Color(0.39118537, 0.39118534, 0.39118534, 1)
 energy = 2.48
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 8.1
 texture = SubResource("GradientTexture2D_8luev")
-texture_scale = 4.25
+texture_scale = 5.25
+height = 379.0
 
 [node name="lys" type="CanvasModulate" parent="." unique_id=1721555689]
 color = Color(0.24115604, 0.24115604, 0.24115604, 1)

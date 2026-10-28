@@ -39,4 +39,4 @@ height = 379.0
 color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
 [node name="Lock" parent="." unique_id=1872613960 instance=ExtResource("2_sblpm")]
-position = Vector2(9, 3)
+position = Vector2(-20, -33)

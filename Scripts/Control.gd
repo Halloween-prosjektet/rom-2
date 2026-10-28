@@ -67,7 +67,7 @@ func _on_game_finish_ok() -> void:
 
 # Debug only: F9 finishes the game.
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_F9:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_I:
 		player_won()
 
 # --- Level switching (new) ---

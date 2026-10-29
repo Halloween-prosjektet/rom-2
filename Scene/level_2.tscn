@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://0mx7bdpn2o5j" path="res://Assests/images/Map/Rommedgulpad.png" id="4_louwq"]
 [ext_resource type="Script" uid="uid://b0kjryi2txejt" path="res://Scripts/rom_3.gd" id="5_7sdqy"]
 [ext_resource type="PackedScene" uid="uid://rib4jft7qamo" path="res://Scene/pressure_plate_yellow.tscn" id="7_43cbn"]
+[ext_resource type="Script" uid="uid://lcadhh11dkuh" path="res://Scripts/area_2d.gd" id="8_2thg8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
 size = Vector2(468.5, 41)
@@ -16,6 +17,9 @@ size = Vector2(516, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2cmd"]
 size = Vector2(1060, 1042)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jte5b"]
+size = Vector2(549.9999, 104.77582)
 
 [node name="Level2" type="Node2D" unique_id=1432768770]
 script = ExtResource("1_a5oyc")
@@ -44,7 +48,7 @@ scale = Vector2(0.96174484, 1)
 polygon = PackedVector2Array(-277.26868, -663.6421, -274.31903, -735.0926, 115.03702, -645.8804, -55.674957, -647.49506, -192.09706, -647.89874, -205.00186, -679.3854, -204.63315, -385.9135, -141.87573, -381.13443, -131.03104, -296.41498, -135.62865, -251.6621, -139.51134, -224.56079, -219.15234, -226.57916, -219.52106, 81.42502, -143.19843, 79.81033, -147.11464, 155.41498, -271.73807, 146.13043)
 
 [node name="WallRight" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=637881350]
-polygon = PackedVector2Array(324.19617, -303.68112, 397.59906, -308.12155, 391.5708, 174.27032, 335.89807, 160.1417, 326.27527, -227.52527, 257.17615, -229.40489, 246.53802, -299.64438)
+polygon = PackedVector2Array(53.4545, -350.90668, 397.59906, -308.12155, 391.5708, 174.27032, 335.89807, 160.1417, 326.27527, -227.52527, 257.17615, -229.40489, 248.18784, -293.85794, 67.59122, -289.00275, 63.703613, -226.28958)
 
 [node name="WallTop" type="CollisionPolygon2D" parent="Rommedroedpad/StaticBody2D" unique_id=1311665871]
 position = Vector2(7.5353427, -142.61472)
@@ -83,3 +87,34 @@ position = Vector2(1382, 517)
 
 [node name="PressurePlateYellow" parent="." unique_id=672420762 instance=ExtResource("7_43cbn")]
 position = Vector2(502, -674)
+
+[node name="CannotEntry" type="Area2D" parent="." unique_id=1510964350]
+position = Vector2(920, 381)
+scale = Vector2(0.9999999, 1)
+script = ExtResource("8_2thg8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CannotEntry" unique_id=383395107]
+position = Vector2(473, 635)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_jte5b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CannotEntry" unique_id=1626096709]
+
+[node name="Label" type="Label" parent="CannotEntry/CanvasLayer" unique_id=717047715]
+anchors_preset = -1
+anchor_right = 0.2140625
+offset_left = 683.0
+offset_top = 817.0
+offset_right = 723.0
+offset_bottom = 840.0
+text = "Cannot enter, please try again later or check other doors..."
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CannotEntry" unique_id=784313061]
+position = Vector2(470, -300)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_jte5b")
+
+[node name="Timer" type="Timer" parent="CannotEntry" unique_id=786974996]
+wait_time = 0.7
+one_shot = true

@@ -65,12 +65,12 @@ func _on_game_finish_wait(max_wait: Variant) -> void:
 func _on_game_finish_ok() -> void:
 	print("Klart! Spilleren kan gå videre til rom 3.")
 
-# Debug only: F9 finishes the game.
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_I:
 		player_won()
 
-# --- Level switching (new) ---
+
 func _connect_doors() -> void:
 	for door in get_tree().get_nodes_in_group("doors"):
 		if current_level.is_ancestor_of(door) and not door.player_entered.is_connected(_on_door_entered):
@@ -100,7 +100,6 @@ func change_level(level_tag: String, door_tag: String) -> void:
 
 	for door in get_tree().get_nodes_in_group("doors"):
 		if current_level.is_ancestor_of(door) and door.door_tag == door_tag:
-			# The sprite is offset from the Player's origin, so cancel that out
 			var sprite: Node2D = player.get_node("AnimatedSprite2D")
 			var body_offset: Vector2 = sprite.global_position - player.global_position
 			var offset: Vector2 = SPAWN_OFFSETS.get(door_tag, Vector2.ZERO)

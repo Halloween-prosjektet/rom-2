@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="1_7kpmo"]
 [ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="2_apcmy"]
 [ext_resource type="Script" uid="uid://lcadhh11dkuh" path="res://Scripts/area_2d.gd" id="3_apcmy"]
+[ext_resource type="Texture2D" uid="uid://c31t5btmcqyj3" path="res://Assests/images/Map/final_room.png" id="4_ojpsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
 size = Vector2(173.56291, 52.19732)
@@ -83,3 +84,32 @@ shape = SubResource("RectangleShape2D_8luev")
 [node name="Timer" type="Timer" parent="CannotEntry" unique_id=1247555104]
 wait_time = 0.7
 one_shot = true
+
+[node name="CannotEntry2" type="Area2D" parent="." unique_id=1861100972]
+scale = Vector2(0.99999976, 1)
+script = ExtResource("3_apcmy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CannotEntry2" unique_id=1270157312]
+
+[node name="Label" type="Label" parent="CannotEntry2/CanvasLayer" unique_id=2120845037]
+anchors_preset = -1
+anchor_right = 0.2140625
+offset_left = 683.0
+offset_top = 817.0
+offset_right = 723.0
+offset_bottom = 840.0
+text = "Cannot enter, please try again later or check other doors..."
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CannotEntry2" unique_id=413423583]
+position = Vector2(-423.78302, -276.3228)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_8luev")
+
+[node name="Timer" type="Timer" parent="CannotEntry2" unique_id=1412972466]
+wait_time = 0.7
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970458005]
+position = Vector2(-386.1776, -1033.4529)
+texture = ExtResource("4_ojpsj")

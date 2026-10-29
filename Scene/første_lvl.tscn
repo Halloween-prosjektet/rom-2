@@ -2,16 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://dt3cqhy10rqey" path="res://Assests/images/Map/GroenntU2Rom1MedUrinflekk2.png" id="1_7kpmo"]
 [ext_resource type="PackedScene" uid="uid://c0elavttjlih2" path="res://Scene/Door.tscn" id="2_apcmy"]
+[ext_resource type="Script" uid="uid://dbt0qdv70omyl" path="res://Scripts/level_1.gd" id="2_vcmo0"]
 [ext_resource type="Script" uid="uid://lcadhh11dkuh" path="res://Scripts/area_2d.gd" id="3_apcmy"]
 [ext_resource type="Texture2D" uid="uid://c31t5btmcqyj3" path="res://Assests/images/Map/final_room.png" id="4_ojpsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8luev"]
 size = Vector2(173.56291, 52.19732)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq0d1"]
+size = Vector2(295.607, 83.9462)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp7w"]
+size = Vector2(881.8545, 1224.901)
+
 [node name="første lvl" type="Sprite2D" unique_id=1110714650]
 position = Vector2(961.00006, 594.49994)
 scale = Vector2(1.3827837, 1.8583333)
 texture = ExtResource("1_7kpmo")
+script = ExtResource("2_vcmo0")
 
 [node name="vegger" type="StaticBody2D" parent="." unique_id=1977926148]
 
@@ -111,5 +119,36 @@ wait_time = 0.7
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970458005]
-position = Vector2(-386.1776, -1033.4529)
+position = Vector2(-378.9458, -893.5426)
 texture = ExtResource("4_ojpsj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=958070134]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D" unique_id=1746041915]
+scale = Vector2(0.9999999, 1)
+polygon = PackedVector2Array(-366.08337, 539.34064, -367.52972, 552.7935, -427.5536, 550.64105, -428.27676, 371.44824, -443.4636, -617.61, 54.806732, -600.92834, -172.33185, -571.6662, -174.44102, -498.68628, -363.19073, -502.45313, -363.19073, -428.193, -363.19073, -169.35889, -400.79605, -161.82526, -401.51923, 103.46619, -369.69934, 119.07156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=50627657]
+position = Vector2(-318.80176, 587.233)
+scale = Vector2(0.99999964, 1)
+shape = SubResource("RectangleShape2D_oq0d1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1825044835]
+position = Vector2(247.89551, 584.54236)
+scale = Vector2(0.99999964, 1)
+shape = SubResource("RectangleShape2D_oq0d1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D" unique_id=2133410056]
+position = Vector2(796.78827, -4.157134)
+polygon = PackedVector2Array(-366.08337, 539.34064, -367.52972, 552.7935, -427.5536, 550.64105, -428.27676, 371.44824, -425.9524, -496.68164, -679.7882, -493.45288, -694.9749, -558.56506, -865.64514, -594.0807, -425.9524, -616.14343, -363.75903, -606.4574)
+
+[node name="FinalRoomSpawn" type="Marker2D" parent="." unique_id=1539338129]
+position = Vector2(-407.71805, -396.47076)
+
+[node name="FinalRoomInside" type="Area2D" parent="." unique_id=661211253]
+position = Vector2(-16.47825, 116.08525)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinalRoomInside" unique_id=2117246290]
+position = Vector2(-362.82352, -1064.0514)
+scale = Vector2(0.9999994, 1)
+shape = SubResource("RectangleShape2D_5qp7w")

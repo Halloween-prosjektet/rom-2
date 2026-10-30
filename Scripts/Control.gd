@@ -14,7 +14,11 @@ const SPAWN_OFFSETS := {
 	"lvl2_entry": Vector2(-50, -50),  # arriving in lvl2: 50px left and up
 	"lvl1_exit": Vector2(0, 20),      # arriving back in lvl1: 20px down
 }
+var final_room_unlocked := false
 
+func unlock_final_room() -> void:
+	final_room_unlocked = true
+	
 var levels = {
 	"lvl1": preload("res://Scene/første_lvl.tscn"),
 	"lvl2": preload("res://Scene/level_2.tscn"),
